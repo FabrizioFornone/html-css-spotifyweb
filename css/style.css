@@ -47,6 +47,8 @@ footer {
   height: 100%;
   width: 200px;
   background-color: #000;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .container-main {
@@ -55,18 +57,23 @@ footer {
 }
 
 header {
-  height: 50px;
+  height: 70px;
   width: 100%;
-  background-color: #111;
+  background-color: rgba(17, 17, 17, 0.889);
+  position: fixed;
+  top: 0;
+  left: 200px;
   z-index: 999;
 }
 
 main {
   height: 100%;
   width: 100%;
-  padding-top: 70px;
   background-color: #1f1f1f;
-  overflow: scroll;
+  overflow: auto;
+  padding-top: 70px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* Header */
@@ -81,4 +88,21 @@ main {
   border: 2px solid #fff;
   text-decoration: none;
   color: #fff;
+}
+
+/* Footer */
+
+.footer-left,
+.footer-right {
+  width: 25%;
+}
+
+.footer-middle {
+    flex-shrink: 1;
+
+}
+
+.footer-right {
+    display: flex;
+    justify-content: end;
 }
