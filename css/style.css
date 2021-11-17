@@ -86,22 +86,23 @@ main {
   align-items: center;
 }
 
-.container-sidebar div {
+.container-sidebar div, .container-sidebar span {
   font-size: 12px;
 }
 
 .container-sidebar h3 {
   font-size: 15;
-  padding: 8px 0;
+  padding: 5px 0;
 }
 
 .nav-side {
   padding: 3px 0;
 }
 
+
 .container-sidebar #logo {
   width: 60%;
-  padding: 15px 0;
+  padding: 10px 0;
 }
 
 .container-sidebar #home,
@@ -111,14 +112,18 @@ main {
   padding-right: 5px;
 }
 
-.container-sidebar i {
-  padding-right: 10px;
-  font-size: 35px;
+.playlist-section {
+    margin: 6px 0;
 }
 
-.container-sidebar span {
+.container-sidebar .playlist-section i {
+  padding-right: 10px;
+  font-size: 32px;
+}
+
+.container-sidebar .playlist-section  span {
     display: inline-block;
-    padding: 8px 0;
+    padding: 6px 0;
 }
 
 /* Header */
@@ -128,11 +133,12 @@ main {
 }
 
 .upgrade.button a {
-  padding: 4px 8px;
-  border-radius: 8px;
+  padding: 8px 25px;
+  border-radius: 25px;
   border: 2px solid #fff;
   text-decoration: none;
   color: #fff;
+  font-size: 13px;
 }
 
 /* Main */
