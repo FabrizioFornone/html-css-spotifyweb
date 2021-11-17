@@ -8,6 +8,7 @@
 
 body {
   color: #fff;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Container Big */
@@ -89,8 +90,9 @@ main {
   font-size: 12px;
 }
 
-.container-sidebar h2 {
-    padding: 8px 0;
+.container-sidebar h3 {
+  font-size: 15;
+  padding: 8px 0;
 }
 
 .nav-side {
@@ -105,8 +107,18 @@ main {
 .container-sidebar #home,
 .container-sidebar #search,
 .container-sidebar #library {
-  width: 20%;
+  width: 15%;
+  padding-right: 5px;
+}
+
+.container-sidebar i {
   padding-right: 10px;
+  font-size: 35px;
+}
+
+.container-sidebar span {
+    display: inline-block;
+    padding: 8px 0;
 }
 
 /* Header */
