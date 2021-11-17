@@ -14,16 +14,12 @@ h2 {
 
 /* Container Big */
 
-.container-big-flex {
-  display: flex;
+.container-big {
   height: 100vh;
   width: 100%;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
-/* Container Principali */
+/* Main Containers */
 
 .container-up {
   height: calc(100vh - 70px);
@@ -41,7 +37,7 @@ footer {
   z-index: 500;
 }
 
-/* Container dentro .container-up */
+/* Container inside .container-up */
 
 .container-sidebar {
   height: 100%;
@@ -49,21 +45,24 @@ footer {
   background-color: #000;
   padding-left: 10px;
   padding-right: 10px;
+  overflow: hidden;
 }
 
 .container-main {
   height: 100%;
   width: calc(100% - 200px);
+  position: relative;
 }
 
 header {
   height: 70px;
-  width: 100%;
+  width: calc(100% - 200px);
   background-color: rgba(17, 17, 17, 0.889);
   position: fixed;
-  top: 0;
-  left: 200px;
   z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 main {
@@ -79,7 +78,7 @@ main {
 /* Header */
 
 .upgrade.button {
-  width: 200px;
+  padding-right: 20px;
 }
 
 .upgrade.button a {
