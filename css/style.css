@@ -4,12 +4,10 @@
   margin: 0;
 }
 
+/* Utility Class */
+
 body {
   color: #fff;
-}
-
-h2 {
-  display: inline-block;
 }
 
 /* Container Big */
@@ -43,8 +41,6 @@ footer {
   height: 100%;
   width: 200px;
   background-color: #000;
-  padding-left: 10px;
-  padding-right: 10px;
   overflow: hidden;
 }
 
@@ -75,6 +71,44 @@ main {
   padding-right: 10px;
 }
 
+/* Sidebar */
+
+.internal-text {
+  padding: 0 15px;
+}
+
+.flex-div {
+  display: flex;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.container-sidebar div {
+  font-size: 12px;
+}
+
+.container-sidebar h2 {
+    padding: 8px 0;
+}
+
+.nav-side {
+  padding: 3px 0;
+}
+
+.container-sidebar #logo {
+  width: 60%;
+  padding: 15px 0;
+}
+
+.container-sidebar #home,
+.container-sidebar #search,
+.container-sidebar #library {
+  width: 20%;
+  padding-right: 10px;
+}
+
 /* Header */
 
 .upgrade.button {
@@ -89,6 +123,8 @@ main {
   color: #fff;
 }
 
+/* Main */
+
 /* Footer */
 
 .footer-left,
@@ -97,11 +133,26 @@ main {
 }
 
 .footer-middle {
-    flex-shrink: 1;
-
+  flex-shrink: 1;
 }
 
 .footer-right {
-    display: flex;
-    justify-content: end;
+  display: flex;
+  justify-content: end;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 575px) {
+  .container-sidebar {
+    width: 50px;
+  }
+
+  .container-main {
+    width: calc(100% - 50px);
+  }
+
+  header {
+    width: calc(100% - 50px);
+  }
 }
