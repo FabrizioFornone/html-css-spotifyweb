@@ -88,6 +88,10 @@ header {
 
 /* Sidebar inside */
 
+.hide-full-top {
+  display: none;
+}
+
 .flex-div {
   display: flex;
 }
@@ -161,12 +165,12 @@ header {
 }
 
 .upgrade.button a {
-  padding: 8px 25px;
+  padding: 6px 25px;
   border-radius: 25px;
   border: 2px solid #fff;
   text-decoration: none;
   color: #fff;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 /* Main */
@@ -178,6 +182,7 @@ nav ul {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 10px;
+  padding: 0 15px;
 }
 
 ul li {
@@ -226,7 +231,7 @@ ul li {
 }
 
 .subtitle {
-  font-size: 10px;
+  font-size: 11px;
   padding: 8px 0;
 }
 
@@ -269,6 +274,7 @@ ul li {
 @media screen and (max-width: 575px) {
   .container-sidebar {
     width: 50px;
+    padding: 5px 14px;
   }
 
   .container-main {
@@ -282,6 +288,18 @@ ul li {
   .album {
     margin: 0 2px;
     width: calc(100% / 2 - 4px);
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .hide-full-top {
+    display: block;
+  }
+
+  .hide-full-top img {
+    padding: 3px 0;
   }
 
 }
