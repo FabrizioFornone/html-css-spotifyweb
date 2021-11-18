@@ -57,34 +57,34 @@ header {
 
 
 .sidebar-up {
-  background-color: rgb(206, 175, 119);
+  /* background-color: rgb(206, 175, 119); */
   height: calc(100% - 70px);
 }
 
 .sidebar-bottom {
-  background-color: rgb(207, 137, 137);
+  /* background-color: rgb(207, 137, 137); */
   height: 70px;
 }
 
 .sidebar-menu {
-  background-color: chocolate;
+  /* background-color: chocolate; */
   height: 180px;
 
 }
 
 .sidebar-playlist {
   height: calc(100% - 180px);
-  background-color: rgb(87, 136, 67);
+  /* background-color: rgb(87, 136, 67); */
 }
 
 .sidebar-createplaylist {
-  background-color: rgb(151, 75, 138);
+  /* background-color: rgb(151, 75, 138); */
   height: 70px;
 
 }
 
 .sidebar-playlistsection {
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
   height: calc(100% - 70px);
   overflow-y: auto;
 }
@@ -177,15 +177,17 @@ header {
 
 nav ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 ul li {
   list-style: none;
   text-transform: uppercase;
-  padding: 0 20px;
+  padding: 0 10px;
   font-size: 12px;
+  height: 30px;
 }
 
 .album-container {
@@ -199,14 +201,15 @@ ul li {
 
 .album-container .album-row {
   display: flex;
+  justify-content: space-between;
 }
 
 .album {
   text-align: center;
+  margin: 0 10px;
 }
 
 .album img {
-  padding: 0 10px;
   object-fit: cover;
   width: 100%;
 }
