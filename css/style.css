@@ -259,9 +259,9 @@ ul li {
   width: calc(100% - 500px);
   height: 100%;
   flex-grow: 1;
-  background-color: rgb(170, 123, 160);
+  /* background-color: rgb(170, 123, 160); */
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -283,20 +283,33 @@ ul li {
   padding: 3px 5px;
 }
 
-
 .footer-middle i {
   font-size: 13px;
-  padding: 3px 15px;
+  padding: 3px 10px;
 }
 
 .far.fa-play-circle {
   font-size: 20px;
 }
 
+.fas.fa-undo {
+  transform: scaleX(-1);
+}
+
+.footer-middle .number {
+  padding: 0 20px;
+  font-size: 12px;
+}
+
+.footer-middle #central-range {
+  min-width: 150px;
+}
+
 /* Input customization */
 
 input {
   background-color: #222326;
+  max-width: 400px;
 }
 
 input[type="range"] {
