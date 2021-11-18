@@ -57,12 +57,12 @@ header {
 
 .sidebar-up {
   /* background-color: rgb(206, 175, 119); */
-  height: calc(100% - 70px);
+  height: calc(100% - 80px);
 }
 
 .sidebar-bottom {
   /* background-color: rgb(207, 137, 137); */
-  height: 70px;
+  height: 80px;
 }
 
 .sidebar-menu {
@@ -88,7 +88,8 @@ header {
 
 /* Sidebar inside */
 
-.hide-full-top {
+.hide-full-top,
+.hide-full-bottom {
   display: none;
 }
 
@@ -158,6 +159,7 @@ header {
   border-radius: 50%;
 }
 
+
 /* Header */
 
 .upgrade.button {
@@ -203,12 +205,10 @@ ul li {
   font-size: 18px;
 }
 
-
 .album-row {
   display: flex;
   flex-wrap: wrap;
   padding: 15px 0;
-
 }
 
 .album-row .album:first-of-type {
@@ -294,7 +294,8 @@ ul li {
     display: none;
   }
 
-  .hide-full-top {
+  .hide-full-top,
+  .hide-full-bottom {
     display: block;
   }
 
@@ -302,4 +303,19 @@ ul li {
     padding: 3px 0;
   }
 
+  .hide-full-top {
+    height: calc(100% - 70px);
+  }
+  .hide-full-bottom {
+    height: 70px;
+  }
+  .hide-full-bottom #download {
+    padding: 10px 0;
+  }
+
+  .hide-full-bottom #profile {
+    padding: 0 2px;
+    background-color: #ccc;
+    border-radius: 50%;
+  }
 }
