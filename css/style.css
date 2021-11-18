@@ -132,8 +132,7 @@ header {
   font-size: 32px;
 }
 
-.container-sidebar span {
-  display: inline-block;
+.sidebar-playlistsection div {
   padding: 6px 0;
 }
 
@@ -254,7 +253,7 @@ ul li {
   width: calc(100% - 500px);
   height: 100%;
   flex-grow: 1;
-  background-color: rgb(153, 113, 150);
+  background-color: #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
