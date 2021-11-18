@@ -55,7 +55,6 @@ header {
 
 /* Sidebar container */
 
-
 .sidebar-up {
   /* background-color: rgb(206, 175, 119); */
   height: calc(100% - 70px);
@@ -69,7 +68,6 @@ header {
 .sidebar-menu {
   /* background-color: chocolate; */
   height: 180px;
-
 }
 
 .sidebar-playlist {
@@ -80,7 +78,6 @@ header {
 .sidebar-createplaylist {
   /* background-color: rgb(151, 75, 138); */
   height: 70px;
-
 }
 
 .sidebar-playlistsection {
@@ -144,18 +141,17 @@ header {
   padding-left: 4px;
 }
 
- .sidebar-bottom #download {
+.sidebar-bottom #download {
   width: 13%;
   padding-right: 8px;
 }
-
 
 .sidebar-bottom #profile {
   width: 14%;
   margin: 0 5px;
   padding: 0 2px;
   background-color: #ccc;
-  border-radius:50%;
+  border-radius: 50%;
 }
 
 /* Header */
@@ -210,11 +206,18 @@ ul li {
 }
 
 .album img {
-  object-fit: cover;
   width: 100%;
 }
 
+.album h3 {
+  font-size: 13px;
+  padding: 5px 0;
+}
 
+.album div {
+  font-size: 10px;
+  padding: 5px 0;
+}
 
 /* Footer */
 
