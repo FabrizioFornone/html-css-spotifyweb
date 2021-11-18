@@ -30,13 +30,14 @@ footer {
   height: 100%;
   width: 250px;
   background-color: #000;
+  padding: 0 15px;
 }
 
 .container-main {
   height: 100%;
   width: calc(100% - 250px);
   background-color: #1f1f1f;
-  overflow: auto;
+  overflow-y: scroll;
   padding-top: 70px;
   position: relative;
 }
@@ -58,21 +59,38 @@ main {
 
 /* Sidebar */
 
-.container-sidebar .sidebar-up,
-.container-sidebar .sidebar-bottom {
-  padding: 0 15px;
-}
 
-.container-sidebar .sidebar-up {
+.sidebar-up {
   background-color: rgb(206, 175, 119);
+  height: calc(100% - 70px);
 }
 
-.container-sidebar .sidebar-bottom {
-  background-color: #ccc;
+.sidebar-bottom {
+  background-color: rgb(207, 137, 137);
+  height: 70px;
 }
 
-.playlist-section {
+.sidebar-menu {
+  background-color: chocolate;
+  height: 180px;
+
+}
+
+.sidebar-playlist {
+  height: calc(100% - 180px);
+  background-color: rgb(87, 136, 67);
+}
+
+.sidebar-createplaylist {
+  background-color: rgb(151, 75, 138);
+  height: 70px;
+
+}
+
+.sidebar-playlistsection {
   background-color: cornflowerblue;
+  height: calc(100% - 70px);
+  overflow-y: auto;
 }
 .flex-div {
   display: flex;
