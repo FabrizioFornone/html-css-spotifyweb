@@ -53,10 +53,6 @@ header {
   justify-content: end;
 }
 
-main {
-  padding: 0 15px;
-}
-
 /* Sidebar container */
 
 
@@ -178,6 +174,44 @@ main {
 }
 
 /* Main */
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+ul li {
+  list-style: none;
+  text-transform: uppercase;
+  padding: 0 20px;
+  font-size: 12px;
+}
+
+.album-container {
+  padding: 0 20px;
+}
+
+.album-container h2 {
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+
+.album-container .album-row {
+  display: flex;
+}
+
+.album {
+  text-align: center;
+}
+
+.album img {
+  padding: 0 10px;
+  object-fit: cover;
+  width: 100%;
+}
+
+
 
 /* Footer */
 
