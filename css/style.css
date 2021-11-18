@@ -63,7 +63,7 @@ header {
 /* Container Sidebar*/
 
 .sidebar-up {
-  background-color: rgb(206, 175, 119);
+  /* background-color: rgb(206, 175, 119); */
   height: calc(100% - 80px);
   overflow-y: hidden;
 }
