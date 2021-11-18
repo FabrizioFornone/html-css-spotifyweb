@@ -57,7 +57,7 @@ main {
   padding: 0 15px;
 }
 
-/* Sidebar */
+/* Sidebar container */
 
 
 .sidebar-up {
@@ -92,6 +92,9 @@ main {
   height: calc(100% - 70px);
   overflow-y: auto;
 }
+
+/* Sidebar inside */
+
 .flex-div {
   display: flex;
 }
@@ -136,16 +139,27 @@ main {
   padding: 6px 0;
 }
 
-.container-sidebar .sidebar-bottom hr {
+.sidebar-bottom hr {
   margin-top: 8px;
   margin-bottom: 8px;
-  margin-right: 15px;
 }
 
-.container-sidebar .sidebar-bottom #download,
-.container-sidebar .sidebar-bottom #profile {
-  width: 10%;
+.sidebar-bottom h3 {
+  padding-left: 4px;
+}
+
+ .sidebar-bottom #download {
+  width: 13%;
   padding-right: 8px;
+}
+
+
+.sidebar-bottom #profile {
+  width: 14%;
+  margin: 0 5px;
+  padding: 0 2px;
+  background-color: #ccc;
+  border-radius:50%;
 }
 
 /* Header */
