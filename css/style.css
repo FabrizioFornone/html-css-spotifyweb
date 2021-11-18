@@ -171,11 +171,13 @@ header {
 
 /* Main */
 
+/* Nav */
+
 nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 15px 0;
+  margin-top: 10px;
 }
 
 ul li {
@@ -186,23 +188,32 @@ ul li {
   height: 30px;
 }
 
+/* Albums */
+
 .album-container {
-  padding: 0 20px;
+  padding: 20px 20px;
 }
 
 .album-container h2 {
   font-size: 18px;
-  padding-bottom: 15px;
 }
 
-.album-container .album-row {
+
+.album-row {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px 0;
+
+}
+
+.album-row .album:first-of-type {
+  margin-left: 0;
 }
 
 .album {
   text-align: center;
   margin: 0 10px;
+  width: calc(100% / 6 - 20px);
 }
 
 .album img {
@@ -214,9 +225,13 @@ ul li {
   padding: 5px 0;
 }
 
-.album div {
+.subtitle {
   font-size: 10px;
-  padding: 5px 0;
+  padding: 8px 0;
+}
+
+#rounded-img {
+  border-radius: 50%;
 }
 
 /* Footer */
@@ -225,7 +240,7 @@ ul li {
 .footer-right {
   width: 250px;
   max-width: calc(100% / 3);
-  background-color: #ccc;
+  /* background-color: #ccc; */
   height: 100%;
   display: flex;
   align-items: center;
@@ -236,13 +251,20 @@ ul li {
   width: calc(100% - 500px);
   height: 100%;
   flex-grow: 1;
-  background-color: darkcyan;
+  /* background-color: darkcyan; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 /* Media Queries */
+
+@media screen and (max-width: 1000px) {
+  .album {
+    margin: 0 5px;
+    width: calc(100% / 4 - 10px);
+  }
+}
 
 @media screen and (max-width: 575px) {
   .container-sidebar {
@@ -256,4 +278,10 @@ ul li {
   header {
     width: calc(100% - 50px);
   }
+
+  .album {
+    margin: 0 2px;
+    width: calc(100% / 2 - 4px);
+  }
+
 }
