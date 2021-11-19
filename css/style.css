@@ -58,11 +58,23 @@ a {
   border-bottom: 1px solid lime;
 }
 
+.img-album:hover i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  display: inline-block;
+}
+
+.img-album img:hover {
+  filter: brightness(60%);
+}
 .upgrade-button:hover {
   transform: scale(1.1);
 }
 
-.far.fa-play-circle:hover {
+.footer-middle-top .far.fa-play-circle:hover {
   transform: scale(1.3);
   color: lime;
 }
@@ -288,14 +300,12 @@ header {
   width: calc(100% / 6 - 20px);
 }
 
-.album img {
-  width: 100%;
-  height: auto;
+.album .img-album {
+  position: relative;
 }
 
-.album img::after {
-  content: "/f144";
-  font-weight: 800;
+.img-album img {
+  width: 100%;
 }
 
 .album h3 {
@@ -306,6 +316,11 @@ header {
 
 .album .subtitle {
   padding: 8px 0;
+}
+
+.album i {
+  font-size: 40px;
+  display: none;
 }
 
 #rounded-img {
@@ -379,7 +394,7 @@ header {
   vertical-align: middle;
 }
 
-.far.fa-play-circle {
+.footer-middle-top .far.fa-play-circle {
   font-size: 18px;
   transition: 0.3s;
 }
