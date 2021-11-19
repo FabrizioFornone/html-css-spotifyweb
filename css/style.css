@@ -68,7 +68,7 @@ a {
 }
 
 .img-album img:hover {
-  filter: brightness(60%);
+  filter: opacity(0.5);
 }
 .upgrade-button:hover {
   transform: scale(1.1);
