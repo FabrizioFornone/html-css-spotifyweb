@@ -20,8 +20,11 @@ body {
   justify-content: center;
 }
 
-.space-between {
-  justify-content: space-between;
+.flex-space-around {
+  justify-content: space-around;
+}
+.flex-column {
+  flex-direction: column;
 }
 
 a {
@@ -158,66 +161,96 @@ header {
 
 /* Sidebar inside */
 
+/* Navbar hide */
+
 .hide-full-top,
 .hide-full-bottom {
   display: none;
 }
 
-.nav-side {
-  padding: 3px 0;
-}
+/* ------ */
+
+/* Font Sidebar */
 .container-sidebar div,
-.container-sidebar span {
-  font-size: 12px;
-}
-
-.container-sidebar #logo {
-  width: 50%;
-  padding: 10px 0;
-  color: #fff;
-}
-
-.sidebar-menu > div {
-  width: 60%;
-}
-.container-sidebar #home,
-.container-sidebar #search,
-.container-sidebar #library {
-  width: 20%;
-  padding-right: 5px;
-}
-
-.sidebar-createplaylist > div {
-  width: 60%;
-}
-
 .sidebar-createplaylist h3 {
-  font-size: 12;
-  color: #fff;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  font-size: 12px;
 }
 
 .sidebar-createplaylist h4 {
   font-size: 11;
 }
-.container-sidebar i {
+
+/* ----- */
+
+/* White font in Sidebar */
+
+.container-sidebar #logo,
+.sidebar-createplaylist h3,
+.sidebar-bottom h3 {
+  color: #fff;
+}
+
+/* ----- */
+
+/* Sidebar padding */
+
+.sidebar-up .white-font,
+.sidebar-up .white-font-no-border,
+.sidebar-bottom .white-font,
+.sidebar-createplaylist h3 {
+  padding-left: 10px;
+}
+
+.nav-side {
+  padding: 3px 0;
+}
+/* Sidebar-menu inside */
+
+.sidebar-menu #logo {
+  width: 50%;
+  padding: 10px 0;
+}
+
+.sidebar-menu #home,
+.sidebar-menu #search,
+.sidebar-menu #library {
+  width: 20%;
+  padding-right: 5px;
+}
+
+.sidebar-menu > div,
+.sidebar-createplaylist > div {
+  width: 60%;
+}
+
+/* Sidebar-createplaylist inside */
+
+.sidebar-createplaylist h3 {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.sidebar-createplaylist i {
   padding-right: 10px;
   font-size: 32px;
 }
+
+/* Sidebar-playlistsection inside */
 
 .sidebar-playlistsection div {
   padding: 6px 0;
   width: 50%;
 }
 
+/* Sidebar-bottom inside */
+
 .sidebar-bottom hr {
   margin: 8px 0;
+  background-color: #ccc;
+  border-radius: 25%;
 }
 
 .sidebar-bottom h3 {
   padding-left: 4px;
-  color: #fff;
 }
 
 .sidebar-bottom #download {
@@ -231,13 +264,6 @@ header {
   padding: 0 2px;
   background-color: #ccc;
   border-radius: 50%;
-}
-
-.sidebar-up .white-font,
-.sidebar-up .white-font-no-border,
-.sidebar-bottom .white-font,
-.sidebar-createplaylist h3 {
-  padding-left: 10px;
 }
 
 /* Header */
@@ -271,7 +297,7 @@ header {
   text-transform: uppercase;
   margin: 0 10px;
   font-size: 12px;
-  height: 22px;
+  height: 30px;
 }
 
 .container-main .green-border {
@@ -291,13 +317,21 @@ header {
 
 /* Albums */
 
+/* Album font color */
+
+.album-container h2,
+.album h3 {
+  color: #fff;
+}
+
+/* ----- */
+
 .album-container {
   padding: 10px 20px;
 }
 
 .album-container h2 {
   font-size: 18px;
-  color: #fff;
 }
 
 .album-row {
@@ -324,19 +358,17 @@ header {
   width: 100%;
 }
 
+.album i {
+  font-size: 40px;
+  display: none;
+}
 .album h3 {
   font-size: 13px;
   padding: 5px 0;
-  color: #fff;
 }
 
 .album .subtitle {
   padding: 8px 0;
-}
-
-.album i {
-  font-size: 40px;
-  display: none;
 }
 
 #rounded-img {
@@ -350,9 +382,6 @@ header {
   width: 250px;
   max-width: calc(100% / 3);
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
 }
 
 .footer-middle {
@@ -360,13 +389,11 @@ header {
   min-width: 200px;
   height: 100%;
   flex-grow: 1;
-  /* background-color: rgb(170, 123, 160); */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 /* Footer inside */
+
+/* Footer color font */
 
 .footer-left div,
 .footer-middle i,
@@ -374,6 +401,30 @@ header {
 .footer-right i {
   color: #fff;
 }
+
+/* ------ */
+
+/* Footer icon size and padding */
+
+.footer-left i,
+.footer-right i {
+  font-size: 12px;
+  padding: 3px 5px;
+}
+.footer-middle-top i {
+  font-size: 13px;
+  padding: 7px 10px;
+  vertical-align: middle;
+}
+
+.footer-middle-top .far.fa-play-circle {
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+/* ----- */
+
+/* Footer Left */
 
 .footer-left img {
   height: 50%;
@@ -391,11 +442,7 @@ header {
   opacity: 1;
 }
 
-.footer-left i,
-.footer-right i {
-  font-size: 12px;
-  padding: 3px 5px;
-}
+/* Footer Middle */
 
 .footer-middle-top,
 .footer-middle-bottom {
@@ -404,18 +451,7 @@ header {
   text-align: center;
 }
 
-.footer-middle-top i {
-  font-size: 13px;
-  padding: 7px 10px;
-  vertical-align: middle;
-}
-
-.footer-middle-top .far.fa-play-circle {
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.fas.fa-undo {
+.footer-middle-top .fas.fa-undo {
   transform: scaleX(-1);
 }
 
