@@ -54,8 +54,8 @@ a {
   border-left: 1px solid lime;
 }
 
-.container-main ul li:hover {
-  border-bottom: 1px solid lime;
+.container-main ul li:hover .green-border::after {
+  display: block;
 }
 
 .img-album:hover i {
@@ -272,6 +272,21 @@ header {
   margin: 0 10px;
   font-size: 12px;
   height: 22px;
+}
+
+.container-main .green-border {
+  position: relative;
+}
+
+.container-main .green-border::after {
+  content: "";
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  bottom: -7px;
+  height: 1.5px;
+  background-color: lime;
+  display: none;
 }
 
 /* Albums */
