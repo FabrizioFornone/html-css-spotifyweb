@@ -64,6 +64,7 @@ footer {
   width: 250px;
   background-color: #000;
   padding: 0 10px;
+  overflow-y: hidden;
 }
 
 .container-main {
@@ -89,35 +90,36 @@ header {
 /* Container Sidebar*/
 
 .sidebar-up {
-  /* background-color: rgb(206, 175, 119); */
   height: calc(100% - 80px);
-  overflow-y: hidden;
 }
 
 .sidebar-bottom {
-  /* background-color: rgb(207, 137, 137); */
   height: 80px;
 }
 
+/* Container inside sidebar-up */
+
 .sidebar-menu {
-  /* background-color: chocolate; */
   height: 140px;
+  background-color: chocolate;
 }
 
 .sidebar-playlist {
   height: calc(100% - 140px);
-  /* background-color: rgb(87, 136, 67); */
 }
 
+/* Container sidebar-playlist */
+
 .sidebar-createplaylist {
-  /* background-color: rgb(151, 75, 138); */
   height: 65px;
+  background-color: burlywood;
 }
 
 .sidebar-playlistsection {
-  /* background-color: cornflowerblue; */
   height: calc(100% - 65px);
   overflow-y: auto;
+  min-height: 40px;
+  background-color: rgb(9, 138, 95);
 }
 
 /* Sidebar inside */
@@ -190,13 +192,14 @@ header {
   border-radius: 50%;
 }
 
-.sidebar-up .white-font, .sidebar-bottom .white-font, .sidebar-createplaylist h3 {
+.sidebar-up .white-font,
+.sidebar-bottom .white-font,
+.sidebar-createplaylist h3 {
   padding-left: 10px;
 }
 
 .sidebar-up .white-font:hover {
   border-left: 1px solid lime;
-}
 }
 
 /* Header */
@@ -362,7 +365,6 @@ header {
 .footer-middle #central-range {
   min-width: 150px;
 }
-
 
 /* Input customization */
 
