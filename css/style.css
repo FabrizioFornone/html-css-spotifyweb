@@ -30,7 +30,6 @@ a {
 
 .subtitle {
   font-size: 11px;
-  padding: 8px 0;
 }
 
 .white-font,
@@ -39,9 +38,33 @@ a {
   opacity: 0.5;
 }
 
+/* Hover */
+
 .white-font:hover {
   opacity: 1;
   cursor: pointer;
+}
+
+.white-font-no-border:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.sidebar-up .white-font:hover {
+  border-left: 1px solid lime;
+}
+
+.container-main ul li:hover {
+  border-bottom: 1px solid lime;
+}
+
+.upgrade-button:hover {
+  transform: scale(1.1);
+}
+
+.far.fa-play-circle:hover {
+  transform: scale(1.3);
+  color: lime;
 }
 
 /* Main Containers */
@@ -91,6 +114,7 @@ header {
 
 .sidebar-up {
   height: calc(100% - 80px);
+  min-height: 200px;
 }
 
 .sidebar-bottom {
@@ -100,26 +124,23 @@ header {
 /* Container inside sidebar-up */
 
 .sidebar-menu {
-  height: 140px;
-  background-color: chocolate;
+  height: 135px;
 }
 
 .sidebar-playlist {
-  height: calc(100% - 140px);
+  height: calc(100% - 135px);
 }
 
 /* Container sidebar-playlist */
 
 .sidebar-createplaylist {
   height: 65px;
-  background-color: burlywood;
 }
 
 .sidebar-playlistsection {
   height: calc(100% - 65px);
   overflow-y: auto;
   min-height: 40px;
-  background-color: rgb(9, 138, 95);
 }
 
 /* Sidebar inside */
@@ -129,13 +150,12 @@ header {
   display: none;
 }
 
+.nav-side {
+  padding: 3px 0;
+}
 .container-sidebar div,
 .container-sidebar span {
   font-size: 12px;
-}
-
-.nav-side {
-  padding: 3px 0;
 }
 
 .container-sidebar #logo {
@@ -144,11 +164,18 @@ header {
   color: #fff;
 }
 
+.sidebar-menu > div {
+  width: 60%;
+}
 .container-sidebar #home,
 .container-sidebar #search,
 .container-sidebar #library {
-  width: 12%;
+  width: 20%;
   padding-right: 5px;
+}
+
+.sidebar-createplaylist > div {
+  width: 60%;
 }
 
 .sidebar-createplaylist h3 {
@@ -168,6 +195,7 @@ header {
 
 .sidebar-playlistsection div {
   padding: 6px 0;
+  width: 50%;
 }
 
 .sidebar-bottom hr {
@@ -193,13 +221,10 @@ header {
 }
 
 .sidebar-up .white-font,
+.sidebar-up .white-font-no-border,
 .sidebar-bottom .white-font,
 .sidebar-createplaylist h3 {
   padding-left: 10px;
-}
-
-.sidebar-up .white-font:hover {
-  border-left: 1px solid lime;
 }
 
 /* Header */
@@ -214,10 +239,6 @@ header {
   border: 2px solid #fff;
   font-size: 12px;
   transition: 0.3s;
-}
-
-.upgrade-button:hover {
-  transform: scale(1.1);
 }
 
 /* Container Main */
@@ -237,11 +258,7 @@ header {
   text-transform: uppercase;
   margin: 0 10px;
   font-size: 12px;
-  height: 25px;
-}
-
-.container-main ul li:hover {
-  border-bottom: 1px solid lime;
+  height: 22px;
 }
 
 /* Albums */
@@ -276,10 +293,19 @@ header {
   height: auto;
 }
 
+.album img::after {
+  content: "/f144";
+  font-weight: 800;
+}
+
 .album h3 {
   font-size: 13px;
   padding: 5px 0;
   color: #fff;
+}
+
+.album .subtitle {
+  padding: 8px 0;
 }
 
 #rounded-img {
@@ -323,9 +349,9 @@ header {
   padding: 0 8px;
 }
 
-.footer-left div {
+.footer-left div:first-child {
   font-size: 12px;
-  padding: 0 5px;
+  padding: 2px 5px;
 }
 
 .footer-left .subtitle:hover {
@@ -340,16 +366,16 @@ header {
   padding: 3px 5px;
 }
 
-.footer-middle-top, .footer-middle-bottom {
+.footer-middle-top,
+.footer-middle-bottom {
   width: 100%;
   height: 50%;
   text-align: center;
 }
 
-
 .footer-middle-top i {
   font-size: 13px;
-  padding: 3px 10px;
+  padding: 7px 10px;
   vertical-align: middle;
 }
 
@@ -358,14 +384,9 @@ header {
   transition: 0.3s;
 }
 
-.far.fa-play-circle:hover {
-  transform: scale(1.3);
-}
-
 .fas.fa-undo {
   transform: scaleX(-1);
 }
-
 
 .footer-middle-bottom .number {
   padding: 0 10px;
@@ -375,10 +396,7 @@ header {
 
 .footer-middle-bottom #central-range {
   width: 50%;
-
 }
-
-
 
 /* Input customization */
 
@@ -466,6 +484,9 @@ input[type="range"]::-ms-thumb {
   background: #e8e8e8;
   cursor: pointer;
 }
+
+/* Hover input range */
+
 input[type="range"]:focus::-ms-fill-lower {
   background: #9e9e9e;
 }
@@ -476,12 +497,21 @@ input[type="range"]:focus::-ms-fill-upper {
 input[type="range"]::-moz-range-track:hover {
   background: lime;
 }
+input[type="range"]::-webkit-slider-runnable-track:hover {
+  background: lime;
+}
 
 input[type="range"]::-moz-range-thumb:hover {
   background: rgb(61, 61, 61);
 }
 
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: rgb(61, 61, 61);
+}
+
 /* Media Queries */
+
+/* Tablet */
 
 @media screen and (max-width: 1199px) {
   .album {
@@ -489,6 +519,8 @@ input[type="range"]::-moz-range-thumb:hover {
     width: calc(100% / 4 - 10px);
   }
 }
+
+/* Mobile */
 
 @media screen and (max-width: 575px) {
   .container-sidebar {
@@ -537,5 +569,4 @@ input[type="range"]::-moz-range-thumb:hover {
     background-color: #ccc;
     border-radius: 50%;
   }
-
 }
